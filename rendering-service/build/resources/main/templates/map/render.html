@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resizable Square</title>
+    <script>
+        function drawSquare() {
+            var height = document.getElementById("heightInput").value;
+            var width = document.getElementById("withInput").value;
+            var square = document.getElementById("square");
+            square.setAttribute("height", height);
+            square.setAttribute("width", width);
+        }
+    </script>
+</head>
+<body>
+<input type="number" id="heightInput" placeholder="Enter height">
+<input type="number" id="widthInput" placeholder="Enter width">
+<button onclick="drawSquare()">getMap</button>
+<svg width="300" height="200">
+    <rect id="square" x="10" y="10" width="0" height="0" fill="pink" />
+</svg>
+</body>
